@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'centos'
+    }
+
+  }
   stages {
     stage('Insitialize /Print Message') {
       steps {

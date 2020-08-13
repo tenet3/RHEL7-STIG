@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'centos:latest'
-      args 'docker pull centos:latest'
+      image 'centos'
+      args 'docker image pull centos:latest'
     }
 
   }

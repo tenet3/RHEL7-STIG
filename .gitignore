@@ -34,3 +34,9 @@ tramp
 *.swo
 rh-creds.env
 travis.env
+
+# Lockdown-specific
+benchparse/
+*xccdf.xml
+*.retry
+

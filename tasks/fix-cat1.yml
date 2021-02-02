@@ -153,7 +153,7 @@
             "HIGH | RHEL-07-010491 | Red Hat Enterprise Linux operating systems version 7.2 or newer using Unified Extensible Firmware Interface (UEFI) must require authentication upon booting into single-user and maintenance modes."
             explicitly create user.cfg file to work around ansible bug https://github.com/ansible/ansible/pull/59823
         shell: test -f {{ file_q }} && echo exists || {{ create_cmd }}
-        check_mode: (ansible_check_mode)
+        check_mode: not ansible_check_mode
         register: rhel7stig_create_grub_user_cfg
         changed_when:
             - rhel7stig_create_grub_user_cfg.stdout == "created"

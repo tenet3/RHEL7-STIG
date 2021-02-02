@@ -73,7 +73,6 @@
 - name: "HIGH | RHEL-07-010290 | PATCH | The Red Hat Enterprise Linux operating system must not have accounts configured with blank or null passwords."
   replace:
       path: "{{ item }}"
-      follow: true
       regexp: 'nullok ?'
   when: rhel_07_010290
   with_items:
